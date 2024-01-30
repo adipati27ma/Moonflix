@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import Topbar from "./Topbar";
 
 const CustomAuthenticated = ({ children }) => {
     return (
@@ -12,8 +13,8 @@ const CustomAuthenticated = ({ children }) => {
                 {/* START: Content */}
                 <div className="ml-[300px] px-[50px]">
                     <div className="py-10 flex flex-col gap-[50px]">
-                        <h2>Start Content</h2>
                         {/* START: Topbar */}
+                        <Topbar />
                         {/* START: Topbar */}
 
                         {/** body children */}
