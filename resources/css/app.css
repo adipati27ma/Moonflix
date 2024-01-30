@@ -1,5 +1,7 @@
 @import "./input.css"; /** input.css ini bisa diimport langsung di TextInput.jsx, tapi Inertia tidak support hal tsb - jadi digabungkan disini */
 @import "./button.css";
+@import "./sidebar.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

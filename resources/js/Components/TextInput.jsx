@@ -11,7 +11,7 @@ export default function TextInput({
     autoComplete,
     required,
     isFocused,
-    handleChange = null,
+    onChange = null,
     placeholder,
     isError,
 }) {
@@ -30,13 +30,13 @@ export default function TextInput({
                 name={name}
                 value={value}
                 defaultValue={defaultValue}
-                className={`rounded-2xl py-[13px] px-7 w-full input-${variant} ${
+                className={`text-white rounded-2xl py-[13px] px-7 w-full input-${variant} ${
                     isError ? "input-error" : ""
                 } ${className ? className : ""}`}
                 ref={input}
                 autoComplete={autoComplete}
                 required={required}
-                onChange={(e) => handleChange !== null && handleChange(e)}
+                onChange={(e) => onChange !== null && onChange(e)}
                 placeholder={placeholder}
             />
         </div>
@@ -53,7 +53,7 @@ TextInput.propTypes = {
     autoComplete: PropTypes.string,
     required: PropTypes.bool,
     isFocused: PropTypes.bool,
-    handleChange: PropTypes.func,
+    onChange: PropTypes.func,
     placeholder: PropTypes.string,
     isError: PropTypes.bool,
 };
