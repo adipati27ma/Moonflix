@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
-const CustomAuthenticated = ({ children }) => {
+const CustomAuthenticatedLayout = ({ children }) => {
     return (
         <>
             <div className="mx-auto max-w-screen hidden lg:block">
@@ -32,4 +32,4 @@ const CustomAuthenticated = ({ children }) => {
     );
 };
 
-export default CustomAuthenticated;
+export default CustomAuthenticatedLayout;
