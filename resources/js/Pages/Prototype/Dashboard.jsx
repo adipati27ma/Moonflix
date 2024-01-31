@@ -38,7 +38,7 @@ const Dashboard = () => {
                                     key={`flickity-featured-${index}`}
                                     slug="the-batman-in-love"
                                     name={`The Batman in Love ${index}`}
-                                    category={`Action - Horror`}
+                                    category={`Action • Horror`}
                                     thumbnail={"/images/featured-1.png"}
                                     rating={index + 1}
                                 />
@@ -58,6 +58,9 @@ const Dashboard = () => {
                             return (
                                 <MovieCard
                                     key={index}
+                                    slug="meong-golden"
+                                    name={`Meong Golden ${index}`}
+                                    category={`Horror • Love`}
                                     thumbnail={"/images/browse-1.png"}
                                 />
                             );
