@@ -3,7 +3,7 @@ import { Head } from "@inertiajs/react";
 import CustomAuthenticatedLayout from "@/Layouts/CustomAuthenticatedLayout/Index";
 import Flickity from "react-flickity-component";
 import FeaturedMovie from "@/Components/FeaturedMovie";
-import BrowseMovie from "@/Components/BrowseMovie";
+import MovieCard from "@/Components/MovieCard";
 
 const Dashboard = () => {
     const flickityOptions = {
@@ -55,7 +55,12 @@ const Dashboard = () => {
                     </div>
                     <Flickity className="gap-[30px]" options={flickityOptions}>
                         {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => {
-                            return <BrowseMovie key={index} />;
+                            return (
+                                <MovieCard
+                                    key={index}
+                                    thumbnail={"/images/browse-1.png"}
+                                />
+                            );
                         })}
                     </Flickity>
                 </div>
