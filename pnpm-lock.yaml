@@ -14,6 +14,9 @@ dependencies:
   react-flickity-component:
     specifier: ^4.0.7
     version: 4.0.7(flickity@3.0.0)(react-dom@18.2.0)(react@18.2.0)
+  react-player:
+    specifier: ^2.14.1
+    version: 2.14.1(react@18.2.0)
 
 devDependencies:
   '@headlessui/react':
@@ -997,7 +1000,6 @@ packages:
   /deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /define-data-property@1.1.1:
     resolution: {integrity: sha512-E7uGkTzkk1d0ByLeSc6ZsFS79Axg+m1P/VsgYsxHgiuc3tFSj+MjMIwe90FC4lOAZzNBdY7kkO2P2wKdsQ1vgQ==}
@@ -1356,6 +1358,10 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
+  /load-script@1.0.0:
+    resolution: {integrity: sha512-kPEjMFtZvwL9TaZo0uZ2ml+Ye9HUMmPwbYRJ324qF9tqMejwykJ5ggTyvzmrbBeapCAbk98BSbTeovHEEP1uCA==}
+    dev: false
+
   /lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
     dev: true
@@ -1376,6 +1382,10 @@ packages:
     dependencies:
       yallist: 3.1.1
     dev: true
+
+  /memoize-one@5.2.1:
+    resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
+    dev: false
 
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -1618,6 +1628,10 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
+  /react-fast-compare@3.2.2:
+    resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+    dev: false
+
   /react-flickity-component@4.0.7(flickity@3.0.0)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Gn+MqLWeW2znG0sPAaaShckXKW1oXVR/RMnJd9EWUuZH33vxRVc7Q1gwpLGDKs0Aiq0D1/cmb8ltepEgDmu7Rw==}
     peerDependencies:
@@ -1634,6 +1648,19 @@ packages:
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-player@2.14.1(react@18.2.0):
+    resolution: {integrity: sha512-jILj7F9o+6NHzrJ1GqZIxfJgskvGmKeJ05FNhPvgiCpvMZFmFneKEkukywHcULDO2lqITm+zcEkLSq42mX0FbA==}
+    peerDependencies:
+      react: '>=16.6.0'
+    dependencies:
+      deepmerge: 4.3.1
+      load-script: 1.0.0
+      memoize-one: 5.2.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-fast-compare: 3.2.2
     dev: false
 
   /react-refresh@0.14.0:
