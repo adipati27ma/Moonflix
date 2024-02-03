@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('user_subscriptions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('subscription_plan_id')->constrained();
+            $table->foreignId('subscription_plan_id')->constrained(); // constrained adalah utk membatasi nilai agar hanya menjadi "tipe untuk koneksi antar tabel"
             $table->integer('price');
             $table->dateTime('expired_date')->nullable();
             $table->string('payment_status', 10)->default('pending');
