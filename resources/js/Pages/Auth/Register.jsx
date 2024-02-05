@@ -1,10 +1,10 @@
+import React from "react";
 import { useEffect } from "react";
 import Button from "@/Components/Button";
 import InputLabel from "@/Components/InputLabel";
 import TextInput from "@/Components/TextInput";
 import InputError from "@/Components/InputError";
 import { Head, Link, useForm } from "@inertiajs/react";
-import React from "react";
 
 const Register = () => {
   const { data, setData, post, processing, errors, reset } = useForm({
