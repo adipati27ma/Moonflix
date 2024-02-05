@@ -19,8 +19,8 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'the-shawshank-redeption',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=zUt9SGcEMVg',
-                'thumbnail' => 'https://imgv3.fotor.com/images/blog-richtext-image/Blue-Yellow-Puppy-Training.png',
-                'rating' => 9.3,
+                'thumbnail' => '/images/featured-1.png',
+                'rating' => 4.3,
                 'is_featured' => true,
             ],
             [
@@ -28,8 +28,8 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'the-god-father',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=zUt9SGcEMVg',
-                'thumbnail' => 'https://imgv3.fotor.com/images/blog-richtext-image/Blue-Yellow-Puppy-Training.png',
-                'rating' => 9.2,
+                'thumbnail' => '/images/featured-1.png',
+                'rating' => 4.2,
                 'is_featured' => false,
             ],
             [
@@ -37,8 +37,8 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'the-god-father-part-ii',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=zUt9SGcEMVg',
-                'thumbnail' => 'https://imgv3.fotor.com/images/blog-richtext-image/Blue-Yellow-Puppy-Training.png',
-                'rating' => 9.0,
+                'thumbnail' => '/images/featured-1.png',
+                'rating' => 4.0,
                 'is_featured' => false,
             ]
         ];
