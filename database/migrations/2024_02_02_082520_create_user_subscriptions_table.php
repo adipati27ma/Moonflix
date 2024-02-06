@@ -18,9 +18,9 @@ return new class extends Migration
             $table->integer('price');
             $table->dateTime('expired_date')->nullable();
             $table->string('payment_status', 10)->default('pending');
-            $table->string('payment_token');
+            $table->string('snap_token')->nullable();
             $table->timestamps();
-            $table->softDeletes('deleted_at');
+            $table->softDeletes();
         });
     }
 

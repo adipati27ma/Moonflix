@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedSmallInteger('active_period_in_months');
             $table->json('features');
             $table->timestamps();
-            $table->softDeletes('delete_at');
+            $table->softDeletes();
         });
     }
 
