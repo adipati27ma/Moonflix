@@ -51,7 +51,7 @@ const Topbar = ({ name }) => {
               <Link
                 href={route("logout")}
                 method="post"
-                as="anchor"
+                // as="anchor"
                 className="transition-all hover:bg-sky-100 p-4"
               >
                 Sign Out
