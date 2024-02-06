@@ -19,5 +19,12 @@ class UserTableSeeder extends Seeder
             'password' => 'password'
         ]);
         $admin->assignRole('admin');
+
+        $user = User::create([
+            'name' => 'User 1',
+            'email' => 'user1@moonflix.test',
+            'password' => 'password'
+        ]);
+        $user->assignRole('user');
     }
 }

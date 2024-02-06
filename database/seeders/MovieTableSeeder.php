@@ -28,7 +28,7 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'the-god-father',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=zUt9SGcEMVg',
-                'thumbnail' => '/images/featured-1.png',
+                'thumbnail' => '/images/browse-1.png',
                 'rating' => 4.2,
                 'is_featured' => false,
             ],
@@ -37,7 +37,7 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'the-god-father-part-ii',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=zUt9SGcEMVg',
-                'thumbnail' => '/images/featured-1.png',
+                'thumbnail' => '/images/browse-2.png',
                 'rating' => 4.0,
                 'is_featured' => false,
             ]
