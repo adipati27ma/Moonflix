@@ -34,7 +34,12 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        if (Auth::user()->hasRole('admin')) { //! hasRole() error php intelephense, tapi browser gak error
+            return redirect(route('admin.dashboard.movie.index'));
+        }
+
+        // return redirect()->intended(RouteServiceProvider::HOME); // sama saja seperti route('user.dashboard.index')
+        return redirect()->route("user.dashboard.index");
     }
 
     /**

@@ -1,12 +1,12 @@
 .input-error {
-    @apply ring ring-red-600 !important;
+  @apply ring ring-red-600 !important;
 }
 
 .input-primary {
-    @apply bg-form-bg focus:bg-form-bg focus:outline-alerange focus:outline-none !important;
+  @apply bg-form-bg focus:bg-form-bg focus:outline-alerange focus:outline-none text-white !important;
 }
 
 .input-primary-outline {
-    @apply bg-white focus:bg-white border-alerange focus:outline-alerange !important;
-    @apply file:bg-alerange file:text-white file:rounded-md file:p-2 !important;
+  @apply bg-white focus:bg-white border-alerange focus:outline-alerange !important;
+  @apply file:bg-alerange file:text-white file:rounded-md file:p-2 !important;
 }
