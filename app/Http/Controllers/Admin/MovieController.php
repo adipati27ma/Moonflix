@@ -39,7 +39,7 @@ class MovieController extends Controller
         return redirect(route('admin.dashboard.movie.index'))->with([
             'message' => 'Movie inserted successfully!',
             'type' => 'success',
-        ]);
+        ]); //* ->with() use for sending/flash a piece of data to the session.
     }
 
     /**
