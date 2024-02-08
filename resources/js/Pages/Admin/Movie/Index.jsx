@@ -20,6 +20,7 @@ const Index = ({ auth, flashMessage, movies }) => {
           <th>Name</th>
           <th>Category</th>
           <th>Rating</th>
+          <th>Featured</th>
           <th colSpan={2}>Action</th>
         </thead>
         <tbody>
@@ -35,10 +36,13 @@ const Index = ({ auth, flashMessage, movies }) => {
               <td>{movie.name}</td>
               <td>{movie.category}</td>
               <td>{movie.rating.toFixed(1)}</td>
+              <td> {movie.is_featured ? "✅" : ""} </td>
               <td>
-                <Button type="button" variant="warning">
-                  Edit
-                </Button>
+                <Link href={route("admin.dashboard.movie.edit", movie.id)}>
+                  <Button type="button" variant="warning">
+                    Edit
+                  </Button>
+                </Link>
               </td>
               <td>
                 <Button type="button" variant="danger">

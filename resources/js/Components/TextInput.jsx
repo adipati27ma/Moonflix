@@ -14,6 +14,7 @@ export default function TextInput({
   onChange = null,
   placeholder,
   isError,
+  ...props
 }) {
   const input = useRef();
 
@@ -26,7 +27,9 @@ export default function TextInput({
   return (
     <div className="flex flex-col items-start">
       <input
+        {...props}
         type={type}
+        id={name}
         name={name}
         value={value}
         defaultValue={defaultValue}
