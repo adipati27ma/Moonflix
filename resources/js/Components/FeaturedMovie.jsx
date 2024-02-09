@@ -6,7 +6,7 @@ const FeaturedMovie = ({ slug, name, category, thumbnail, rating }) => {
   return (
     <div className="absolute overflow-hidden group mr-[30px]">
       <img
-        src={thumbnail}
+        src={`/storage/${thumbnail}`}
         className="object-cover rounded-[30px] w-[520px] h-[340px]"
         alt=""
       />
