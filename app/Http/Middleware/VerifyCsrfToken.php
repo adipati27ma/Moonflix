@@ -12,6 +12,6 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        'midtrans/notification', // docs: exclude route 'midtrans/notification' from CSRF token validation.
     ];
 }
