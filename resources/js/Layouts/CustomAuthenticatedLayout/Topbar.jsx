@@ -22,11 +22,16 @@ const Topbar = ({ name }) => {
         className="flex justify-between items-center cursor-pointer"
         onClick={triggerDropdown}
       >
-        <input
-          type="text"
-          className="top-search"
-          placeholder="Search movie, cast, genre"
-        />
+        {route().current("user.dashboard.index") ? (
+          <input
+            type="text"
+            className="top-search"
+            placeholder="Search movie, cast, genre"
+          />
+        ) : (
+          <div></div>
+        )}
+
         <div className="flex items-center gap-4">
           <span className="text-black text-sm font-medium">
             Welcome, {name}
