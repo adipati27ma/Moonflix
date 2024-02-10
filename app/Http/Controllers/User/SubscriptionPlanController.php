@@ -42,7 +42,7 @@ class SubscriptionPlanController extends Controller
             'user_id' => Auth::id(),
             'subscription_plan_id' => $subscriptionPlan->id,
             'price' => $subscriptionPlan->price,
-            // 'expired_date' => Carbon::now()->addMonths($subscriptionPlan->active_period_in_months),
+            // 'expired_date' => Carbon::now()->addMonths($subscriptionPlan->active_period_in_months), // dipindahkan ke func. midtransCallback
             'payment_status' => 'pending',
         ];
 
@@ -64,12 +64,9 @@ class SubscriptionPlanController extends Controller
         return inertia('User/Dashboard/SubscriptionPlan/Index', [
             'userSubscription' => $userSubscription,
         ]);
-
-        // return inertia('User/Dashboard/SubscriptionPlan/Index', [
-        //     'subscriptionPlans' => SubscriptionPlan::all(),
-        // ]);
     }
 
+    // docs: this function is taken from Midtrans Github (kata taufan)
     public function midtransCallback(Request $request)
     {
         $notif = new Notification();

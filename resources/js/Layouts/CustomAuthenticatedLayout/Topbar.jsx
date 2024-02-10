@@ -8,8 +8,10 @@ const Topbar = ({ name }) => {
   const triggerDropdown = () => {
     if (isDropdownOpen) {
       dropdownTarget.current.classList.remove("hidden");
+      dropdownTarget.current.classList.add("flex");
     } else {
       dropdownTarget.current.classList.add("hidden");
+      dropdownTarget.current.classList.remove("flex");
     }
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -33,13 +35,13 @@ const Topbar = ({ name }) => {
           <div className="collapsible-dropdown flex flex-col gap-2 relative">
             <div className="outline outline-2 outline-gray-2 p-[5px] rounded-full w-[60px] dropdown-button">
               <img
-                src="/images/avatar.png"
+                src="/images/avatar-default.png"
                 className="rounded-full object-cover w-full"
                 alt=""
               />
             </div>
             <div
-              className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden"
+              className="bg-white rounded-2xl text-black font-medium flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden shadow-md"
               ref={dropdownTarget}
             >
               <a href="#!" className="transition-all hover:bg-sky-100 p-4">
