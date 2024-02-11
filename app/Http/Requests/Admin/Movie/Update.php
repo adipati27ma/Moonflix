@@ -26,6 +26,8 @@ class Update extends FormRequest
         //? tapi anehnya jika dihapus tidak ada pengaruh apa2, taufan emang gak jelas! (ternyata berpengaruh, nama harus terus diganti saat edit)
         //* setelah dicari, ternyata saat update/edit memang perlu ditambahkan "$this->movie->id" ($this-> <table> ->id),
         //* utk melakukan pengecualian utk "unique" pada yg sedang diedit.
+
+        //! btw gak tau kenapa dah di update kalo "required", begitu upload file jadi error semua, jadi diubah "nullable". (tapi tetap error, taufan gajelas ee)
         return [
             "name" => "required|unique:movies,name,{$this->movie->id}",
             "category" => 'required',

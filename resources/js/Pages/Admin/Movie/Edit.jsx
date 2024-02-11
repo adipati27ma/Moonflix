@@ -25,10 +25,8 @@ const Edit = ({ auth, movie }) => {
     if (data.thumbnail === movie.thumbnail) {
       delete data.thumbnail;
     }
-    put(route("admin.dashboard.movie.update", movie.id), {
-      _method: "PUT",
-      ...data,
-    });
+
+    put(route("admin.dashboard.movie.update", movie.id));
   };
 
   return (
@@ -69,7 +67,7 @@ const Edit = ({ auth, movie }) => {
               <div>
                 <InputLabel forInput="video_url" value="Video URL" />
                 <TextInput
-                  type="url"
+                  type="text"
                   name="video_url"
                   variant="primary-outline"
                   defaultValue={movie.video_url}
