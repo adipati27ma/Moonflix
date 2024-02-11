@@ -115,7 +115,7 @@ const Edit = ({ auth, movie }) => {
                   name="is_featured"
                   onChange={(e) => setData("is_featured", e.target.checked)}
                   className="mt-1"
-                  checked={movie.is_featured ? true : false}
+                  checked={data.is_featured}
                 />
                 <InputLabel
                   forInput="is_featured"
