@@ -6,6 +6,7 @@ import FlashMessage from "@/Components/FlashMessage";
 
 const Index = ({ auth, flashMessage, movies }) => {
   const { delete: destroy, put } = useForm();
+  console.log(flashMessage);
 
   return (
     <CustomAuthenticatedLayout auth={auth}>
@@ -15,7 +16,9 @@ const Index = ({ auth, flashMessage, movies }) => {
           Insert New Movie
         </Button>
       </Link>
-      {flashMessage?.message && <FlashMessage message={flashMessage.message} />}
+      {flashMessage?.message && (
+        <FlashMessage message={flashMessage.message} name={flashMessage.name} />
+      )}
 
       <table className="table-fixed w-full text-center">
         <thead>

@@ -81,7 +81,7 @@ class MovieController extends Controller
         $movie->update($data);
 
         return redirect(route('admin.dashboard.movie.index'))->with([
-            'message' => 'Movie updated successfully',
+            'message' => 'Movie updated successfully!',
             'type' => 'success',
         ]);
     }
