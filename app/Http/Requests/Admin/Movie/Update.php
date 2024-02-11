@@ -22,10 +22,12 @@ class Update extends FormRequest
      */
     public function rules(): array
     {
-        //* jika kode tidak ditambahkan ".$this->movie->id" setelah row "name", otomatis ter-set sebagai duplikat (gak tau deh taufan ga jelas)
-        //? tapi anehnya jika dihapus tidak ada pengaruh apa2, taufan emang gak jelas!
+        //* jika kode tidak ditambahkan "$this->movie->id" setelah row "name", otomatis ter-set sebagai duplikat (gak tau deh taufan ga jelas)
+        //? tapi anehnya jika dihapus tidak ada pengaruh apa2, taufan emang gak jelas! (ternyata berpengaruh, nama harus terus diganti saat edit)
+        //* setelah dicari, ternyata saat update/edit memang perlu ditambahkan "$this->movie->id" ($this-> <table> ->id),
+        //* utk melakukan pengecualian utk "unique" pada yg sedang diedit.
         return [
-            "name" => 'required|unique:movies,name',
+            "name" => "required|unique:movies,name,{$this->movie->id}",
             "category" => 'required',
             'video_url' => "required|url",
             'thumbnail' => "nullable|image",

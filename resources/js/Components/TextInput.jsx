@@ -41,6 +41,7 @@ export default function TextInput({
         required={required}
         onChange={(e) => onChange !== null && onChange(e)}
         placeholder={placeholder}
+        step={type === "number" ? "0.1" : null}
       />
     </div>
   );
