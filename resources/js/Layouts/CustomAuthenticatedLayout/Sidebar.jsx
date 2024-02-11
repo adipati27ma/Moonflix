@@ -6,8 +6,6 @@ import { UserMenu, UserOthersMenu } from "./MenuList";
 import MenuItem from "./MenuItem";
 
 const Sidebar = ({ auth }) => {
-  console.log(auth.activePlan);
-
   return (
     <>
       <aside className="fixed z-50 w-[300px] h-full">

@@ -77,6 +77,7 @@ class MovieController extends Controller
         } else {
             $data['thumbnail'] = $movie->thumbnail;
         }
+        $data['slug'] = Str::slug($data['name']);
         $movie->update($data);
 
         return redirect(route('admin.dashboard.movie.index'))->with([
